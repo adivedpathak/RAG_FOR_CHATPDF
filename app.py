@@ -223,13 +223,17 @@ async def cleanup_session(session_id: str):
         del vectorstores[session_id]
     return {"message": "Session cleaned up successfully."}
 
-# Health check endpoint
+@app.get("/")
+async def root():
+    return {"message": "This is API of RAG model of project Chat with PDF  by Aditya Vedpathak "}
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
-
+    
 # Entry point
 if __name__ == "__main__":
     import uvicorn
-      uvicorn.run("app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+    uvicorn.run("app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+
     
