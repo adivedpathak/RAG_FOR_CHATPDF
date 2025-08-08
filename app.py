@@ -24,8 +24,8 @@ import os
 # Load environment variables
 load_dotenv()
 
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+PINECONE_API_KEY = "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"
+GROQ_API_KEY = "pcsk_7MSXyc_HYb1AtqAFwpfb4YHGV6c96rPigoWdGwNPhKbkijevQ6MiyAcd7wToGgyQrxmgWD"
 INDEX_NAME = "docchat-index"
 MAX_SESSIONS = 100
 CHUNK_SIZE = 5000
